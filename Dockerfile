@@ -6,11 +6,11 @@ MAINTAINER bdy1234567@126.com
 # docker run -p host_port:container_port -d ss:1.0
 
 # Install dependent packages.
-RUN apt update
-RUN apt install -y apt-utils vim curl net-tools iputils-ping ssh git make zip unattended-upgrades
+RUN apt-get update
+RUN apt-get install -y apt-utils vim curl net-tools iputils-ping ssh git make zip unattended-upgrades
 RUN unattended-upgrade -d
 
-RUN apt install -y python-pip
+RUN apt-get install -y python-pip
 RUN pip install setuptools
 RUN pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 
